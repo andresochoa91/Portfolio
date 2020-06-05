@@ -15,4 +15,4 @@ With everything you have learned you will creating your portfolio from scratch w
 
 Fork this repo and push into it all your portfolio changes.
 
-**Happy codding!**
+**Happy coding!**
