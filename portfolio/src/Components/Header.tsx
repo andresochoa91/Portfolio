@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../Images/htmllogo.png';
 import '../app.css';
 
+/* This displays a header with a navbar that includes link.... */
 const Header: React.FC = () => {
   const tStyles: string = "f6 f5-l bg-animate black-80 dib pa3 ph4-l hover-bg-light-"; 
 

@@ -5,37 +5,6 @@ import unaula from '../../Images/unaula.png';
 
 const Education: React.SFC = () => {
   return (
-    // <ul className="list">
-    //   <li className="pa3 pa4-ns bb b--black-10">
-    //     <h2>Computer Software Engineering</h2>
-    //     <h3>Code the Dream</h3>
-    //     <span className="f5 db lh-copy measure mb2">
-    //       I passed the bootcamp test for Code The Dream and I was admitted into the advanced High Noon program where we learn Full-Stack development.
-    //     </span>
-    //     <p className="i">In progress</p>
-    //   </li>
-    //   <li className="pa3 pa4-ns bb b--black-10">
-    //     <h2>Computer Software Engineering</h2>
-    //     <h3>Code Tenderloin</h3>
-    //     <span className="f5 db lh-copy measure mb2">
-    //       Completed Code Tenderloin’s Job Readiness Program, Code Ramp program and the advanced Code Ramp ++ programs. 
-    //     </span>
-    //     <p className="i">Class of 2020</p>
-    //   </li>
-    //   <li className="pa3 pa4-ns bb b--black-10">
-    //     <h2>Industrial Engineering</h2>
-    //     <h3>Latin American Autonomous University</h3>
-    //     <span className="f5 db lh-copy measure mb2">
-    //       Industrial Engineer with a minor in Logistics.
-    //     </span>
-    //     <span className="f5 db lh-copy measure">
-    //       Active member of the "Ingeco" research group, participating in national and international meetings in Medellín, Cartagena and Bucaramanga, on the impact of engineering on national development.
-    //     </span>
-    //     <p className="i">Class of 2015</p>
-    //   </li>
-    // </ul>
-
-
     <section className="mw7 mt4 center">
       <article className="pv4 bb b--black-10 ph3 ph0-l">
         <div className="flex flex-column flex-row-ns">
@@ -82,7 +51,7 @@ const Education: React.SFC = () => {
             </p>
           </div>
           <div className="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
-            <img src={ unaula } className="db" alt="" />
+            <img src={ unaula } className="db w-70" alt="" />
           </div>
         </div>
         <p className="f6 lh-copy gray mv0">By <span className="ttu">Class of 2015</span></p>
