@@ -1,21 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../Images/htmllogo.png';
+import '../app.css';
 
+/* This displays a header with a navbar that includes link.... */
 const Header: React.FC = () => {
-  const tStyles: string = "f6 f5-l link bg-animate black-80 dib pa3 ph4-l hover-bg-"; 
+  const tStyles: string = "f6 f5-l bg-animate black-80 dib pa3 ph4-l hover-bg-light-"; 
 
   return (
     <header className="bg-white black-80 tc pv4 avenir">
-      <a href="/" className="bg-black-80 ba b--black dib pa3 w2 h2 br-100">
-        <svg className="white" data-icon="skull" viewBox="0 0 32 32" style={{fill:"currentcolor"}}><title>skull icon</title><path d="M16 0 C6 0 2 4 2 14 L2 22 L6 24 L6 30 L26 30 L26 24 L30 22 L30 14 C30 4 26 0 16 0 M9 12 A4.5 4.5 0 0 1 9 21 A4.5 4.5 0 0 1 9 12 M23 12 A4.5 4.5 0 0 1 23 21 A4.5 4.5 0 0 1 23 12"></path></svg>
+      <a href="/" className="bg-black-50 ba b--black-10 dib pa3 w3 h3 br-100">
+        <img src={logo} alt="logo"/>
       </a>
       <h1 className="mt2 mb0 baskerville i fw1 f1">Johan Ochoa</h1>
-      <h2 className="mt2 mb0 f6 fw4 ttu tracked">Welcome</h2>
+      <h2 className="mt2 mb0 f6 fw4 ttu tracked">Software Engineer</h2>
       <nav className="bt bb tc mw7 center mt4">
-        <NavLink className={`${tStyles}light-pink`} to="/">About Me</NavLink>
-        <NavLink className={`${tStyles}light-green`} to="/profile">Profile</NavLink>
-        <NavLink className={`${tStyles}light-blue`} to="/projects">Projects</NavLink>
-        <NavLink className={`${tStyles}light-yellow`} to="/contact">Contact</NavLink>
+        <NavLink activeClassName="act1" className={`${tStyles}green`} to="/about">About Me</NavLink>
+        <NavLink activeClassName="act2" className={`${tStyles}yellow`} to="/profile">Profile</NavLink>
+        <NavLink activeClassName="act3" className={`${tStyles}blue`} to="/projects">Projects</NavLink>
+        <NavLink activeClassName="act4" className={`${tStyles}pink`} to="/contact">Contact</NavLink>
       </nav>
     </header>
   );
