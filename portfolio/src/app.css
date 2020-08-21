@@ -1,0 +1,33 @@
+.act1 {
+  background-color: #fbf1a9 !important;
+}
+
+.act2 {
+  background-color: #96ccff !important;
+}
+
+.act3 {
+  background-color: #ffa3d7 !important;
+}
+
+.act4 {
+  background-color: #bfb !important;
+}
+
+.sp {
+  margin: 0 10px !important;
+}
+
+a {
+  color: #000 !important;
+  text-decoration: none !important;
+  padding: 10px;
+}
+
+@media (max-width: 960px) {
+  .fn {
+    float: none !important;
+    width: 100% !important;
+    text-align: center;
+  }
+}
