@@ -14,10 +14,10 @@ const Header: React.FC = () => {
       <h1 className="mt2 mb0 baskerville i fw1 f1">Johan Ochoa</h1>
       <h2 className="mt2 mb0 f6 fw4 ttu tracked">Software Engineer</h2>
       <nav className="bt bb tc mw7 center mt4">
-        <NavLink activeClassName="act1" className={`${tStyles}yellow`} to="/about">About Me</NavLink>
-        <NavLink activeClassName="act2" className={`${tStyles}blue`} to="/profile">Profile</NavLink>
-        <NavLink activeClassName="act3" className={`${tStyles}pink`} to="/projects">Projects</NavLink>
-        <NavLink activeClassName="act4" className={`${tStyles}gray`} to="/contact">Contact</NavLink>
+        <NavLink activeClassName="act1" className={`${tStyles}green`} to="/about">About Me</NavLink>
+        <NavLink activeClassName="act2" className={`${tStyles}yellow`} to="/profile">Profile</NavLink>
+        <NavLink activeClassName="act3" className={`${tStyles}blue`} to="/projects">Projects</NavLink>
+        <NavLink activeClassName="act4" className={`${tStyles}pink`} to="/contact">Contact</NavLink>
       </nav>
     </header>
   );

@@ -17,7 +17,7 @@ const App: React.FC = () => {
       <Switch>
         <Route exact path="/" render={() => <Redirect to="/about" />} />  
         <Route path="/about" render={() => <About />} />
-        <Route path="/profile" render={() => <Profile />} />  
+        <Route path="/profile" render={(props) => <Profile {...props}/>} />  
         <Route path="/projects" render={() => <Projects />} />  
         <Route path="/contact" render={() => <Contact />} />        
       </Switch>
