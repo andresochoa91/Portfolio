@@ -1,8 +1,8 @@
 import React from 'react';
-import ufoInSF from '../Images/ufoInSF.png';
-import cityWeather from '../Images/cityWeather.png';
-import faceRecognition from '../Images/faceRecognition.png';
-import ticTacToe from '../Images/ticTacToe.png';
+import ufoInSF from '../../Images/ufoInSF.png';
+import cityWeather from '../../Images/cityWeather.png';
+import faceRecognition from '../../Images/faceRecognition.png';
+import ticTacToe from '../../Images/ticTacToe.png';
 
 interface IProps {
   projects: Array<Projects>;

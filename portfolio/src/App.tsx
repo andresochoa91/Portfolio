@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import "tachyons";
-import Header from './Components/Header';
-import About from './Components/About';
-import Profile from './Components/Profile';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import Header from './Components/Header/Header';
+import About from './Components/About/About';
+import Profile from './Components/Profile/Profile';
+import Projects from './Components/Projects/Projects';
+import Contact from './Components/Contact/Contact';
+import Footer from './Components/Footer/Footer';
 import { Route, Switch, Redirect } from 'react-router-dom';
-
-
 
 const App: React.FC = () => {
   const [ studies, setStudies ] = useState<Array<Studies>>([]);
@@ -19,38 +17,23 @@ const App: React.FC = () => {
   const url: string = "https://api.airtable.com/v0/appkh2au2vrFCqrR6/Table%20";
 
 
-  useEffect(() => {
-    fetch(`${url}1${apiKey}`)
+  const fetchAirtable = (num: number):void => {
+    fetch(`${url}${num}${apiKey}`)
     .then(response => response.json())
     .then(data => {
-      setStudies(data.records.map((study: any) => {
-        return {...study.fields, id: study.id};  
-      }));
+      ( num === 1 ? setStudies :
+        num === 2 ? setExperience :
+        num === 3 ? setSkills : setProjects
+      )(data.records.map((d: any) => {
+        return {...d.fields, id: d.id};  
+      }))
     })
+  }
 
-    fetch(`${url}2${apiKey}`)
-    .then(response => response.json())
-    .then(data => {
-      setExperience(data.records.map((exp: any) => {
-        return {...exp.fields, id: exp.id};  
-      }));
-    });
-
-    fetch(`${url}3${apiKey}`)
-    .then(response => response.json())
-    .then(data => {
-      setSkills(data.records.map((sk: any) => {
-        return {...sk.fields, id: sk.id};  
-      }));
-    });
-
-    fetch(`${url}4${apiKey}`)
-    .then(response => response.json())
-    .then(data => {
-      setProjects(data.records.map((pr: any) => {
-        return {...pr.fields, id: pr.id};  
-      }));
-    });
+  useEffect(() => {
+    for (let i = 1; i <= 4; i++) {
+      fetchAirtable(i)
+    }
   }, []);
 
   return (
@@ -64,7 +47,7 @@ const App: React.FC = () => {
             studies={ studies } 
             experience={ experience } 
             skills={ skills }
-            {...props}
+            { ...props }
           />
         }/>  
         <Route path="/projects" render={() => <Projects projects={ projects }/>} />  

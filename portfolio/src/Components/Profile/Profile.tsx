@@ -1,10 +1,10 @@
 import React from 'react';
-import '../Images/ufoInSF.png'
-import Education from './Profile/Education';
-import Skills from './Profile/Skills';
-import Experience from './Profile/Experience';
+import '../../Images/ufoInSF.png'
+import Education from './Education';
+import Skills from './Skills';
+import Experience from './Experience';
 import { Switch, Route, NavLink, Redirect, RouteComponentProps } from 'react-router-dom';
-import '../app.css';
+import '../../app.css';
 
 interface IProps {
   studies: Array<Studies>;
