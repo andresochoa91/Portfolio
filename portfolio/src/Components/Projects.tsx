@@ -58,10 +58,6 @@ const Projects: React.FC = () => {
       </article>
       </div>
     </>
-
-
-
-
   );
 }
 
