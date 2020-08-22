@@ -14,11 +14,13 @@ const App: React.FC = () => {
   const [ studies, setStudies ] = useState<Array<Studies>>([]);
   const [ experience, setExperience ] = useState<Array<Experience>>([]);
   const [ skills, setSkills ] = useState<Array<Skills>>([]);
-  const apiKey: string = "keyBeXZyPUF8I8G0u"
+  const [ projects, setProjects ] = useState<Array<Projects>>([]);
+  const apiKey: string = "?api_key=keyBeXZyPUF8I8G0u";
+  const url: string = "https://api.airtable.com/v0/appkh2au2vrFCqrR6/Table%20";
 
 
   useEffect(() => {
-    fetch(`https://api.airtable.com/v0/appkh2au2vrFCqrR6/Table%201?api_key=${apiKey}`)
+    fetch(`${url}1${apiKey}`)
     .then(response => response.json())
     .then(data => {
       setStudies(data.records.map((study: any) => {
@@ -26,7 +28,7 @@ const App: React.FC = () => {
       }));
     })
 
-    fetch(`https://api.airtable.com/v0/appkh2au2vrFCqrR6/Table%202?api_key=${apiKey}`)
+    fetch(`${url}2${apiKey}`)
     .then(response => response.json())
     .then(data => {
       setExperience(data.records.map((exp: any) => {
@@ -34,11 +36,19 @@ const App: React.FC = () => {
       }));
     });
 
-    fetch(`https://api.airtable.com/v0/appkh2au2vrFCqrR6/Table%203?api_key=${apiKey}`)
+    fetch(`${url}3${apiKey}`)
     .then(response => response.json())
     .then(data => {
       setSkills(data.records.map((sk: any) => {
         return {...sk.fields, id: sk.id};  
+      }));
+    });
+
+    fetch(`${url}4${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+      setProjects(data.records.map((pr: any) => {
+        return {...pr.fields, id: pr.id};  
       }));
     });
   }, []);
@@ -54,9 +64,10 @@ const App: React.FC = () => {
             studies={ studies } 
             experience={ experience } 
             skills={ skills }
-            {...props}/>}
-        />  
-        <Route path="/projects" render={() => <Projects />} />  
+            {...props}
+          />
+        }/>  
+        <Route path="/projects" render={() => <Projects projects={ projects }/>} />  
         <Route path="/contact" render={() => <Contact />} />        
       </Switch>
       <Footer />

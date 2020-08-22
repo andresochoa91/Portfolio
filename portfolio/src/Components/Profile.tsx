@@ -9,7 +9,7 @@ import '../app.css';
 interface IProps {
   studies: Array<Studies>;
   experience: Array<Experience>;
-  skills: Array<Skills>
+  skills: Array<Skills>;
 }
 
 const Profile: React.SFC<RouteComponentProps & IProps> = ({match, studies, experience, skills}) => {

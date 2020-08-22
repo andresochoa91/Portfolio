@@ -21,3 +21,9 @@ type Skills = {
   id: string
 }
 
+type Projects = {
+  name: string,
+  description: string;
+  id: string;
+}
+
