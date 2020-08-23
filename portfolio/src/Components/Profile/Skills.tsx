@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PortfolioContext } from '../../Context';
 import frontEnd from '../../Images/frontEnd.png';
 import backEnd from '../../Images/backEnd.png';
 import language from '../../Images/languageIcon.png';
 
-interface IProps {
+interface IContext {
   skills: Array<Skills>;
 }
 
-const Skills: React.SFC<IProps> = ({ skills }) => {
+const Skills: React.SFC = () => {
+  const { skills } = useContext<IContext>(PortfolioContext)
   return (
     <div className="tc">
       {

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PortfolioContext } from '../../Context';
 
-interface IProps {
+interface IContext {
   studies: Array<Studies>;
 }
 
-const Education: React.SFC<IProps> = ({ studies }) => {
+const Education: React.SFC = () => {
+  const { studies } = useContext<IContext>(PortfolioContext);
   return (
     <section className="mw7 mt4 center">
       {
