@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PortfolioContext } from '../../Context';
 import ufoInSF from '../../Images/ufoInSF.png';
 import cityWeather from '../../Images/cityWeather.png';
 import faceRecognition from '../../Images/faceRecognition.png';
 import ticTacToe from '../../Images/ticTacToe.png';
 
-interface IProps {
+interface IContext {
   projects: Array<Projects>;
 }
 
-const Projects: React.FC<IProps> = ({ projects }) => {
+const Projects: React.FC = () => {
+  const { projects } = useContext<IContext>(PortfolioContext);
   return (
     <>
       <div className="mw8 center dt-ns dt--fixed-ns bb b--black-10">

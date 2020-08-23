@@ -6,13 +6,7 @@ import Experience from './Experience';
 import { Switch, Route, NavLink, Redirect, RouteComponentProps } from 'react-router-dom';
 import '../../app.css';
 
-interface IProps {
-  studies: Array<Studies>;
-  experience: Array<Experience>;
-  skills: Array<Skills>;
-}
-
-const Profile: React.SFC<RouteComponentProps & IProps> = ({match, studies, experience, skills}) => {
+const Profile: React.SFC<RouteComponentProps> = ({ match }) => {
   const lStyles: string = "sp br-pill bb link dim dark-gray f6 f5-ns dib hover-bg-light-";
   return (
     <section className="mw8 center avenir">
@@ -23,9 +17,9 @@ const Profile: React.SFC<RouteComponentProps & IProps> = ({match, studies, exper
       </nav>
       <Switch>
         <Route exact path={`${match.path}`} render={() => <Redirect to={`${match.path}/languages`} />}/>
-        <Route path={`${match.path}/languages`} render={() => <Skills skills={ skills }/>}/>
-        <Route path={`${match.path}/education`} render={() => <Education studies={ studies } />}/>
-        <Route path={`${match.path}/experience`} render={() => <Experience experience={ experience }/>}/>
+        <Route path={`${match.path}/languages`} render={() => <Skills />}/>
+        <Route path={`${match.path}/education`} render={() => <Education />}/>
+        <Route path={`${match.path}/experience`} render={() => <Experience />}/>
       </Switch>
     </section>  
   );
