@@ -1,6 +1,18 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-export const PortfolioContext = createContext<any>({});
+export interface IContext {
+  studies: Array<Studies>;
+  experience: Array<Experience>;
+  skills: Array<Skills>;
+  projects: Array<Projects>;
+}
+
+export const PortfolioContext = createContext<IContext>({
+  studies: [],
+  experience: [],
+  skills: [],
+  projects: []
+});
 
 export const Provider = (props: any) => {
 
@@ -8,6 +20,7 @@ export const Provider = (props: any) => {
   const [ experience, setExperience ] = useState<Array<Experience>>([]);
   const [ skills, setSkills ] = useState<Array<Skills>>([]);
   const [ projects, setProjects ] = useState<Array<Projects>>([]);
+  
   const apiKey: string = "?api_key=keyBeXZyPUF8I8G0u";
   const url: string = "https://api.airtable.com/v0/appkh2au2vrFCqrR6/Table%20";
 
@@ -30,8 +43,6 @@ export const Provider = (props: any) => {
       fetchAirtable(i)
     }
   }, []);
-
-
 
   return (
     <PortfolioContext.Provider value={{

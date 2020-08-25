@@ -1,13 +1,9 @@
 import React, { useContext } from 'react';
-import { PortfolioContext } from '../../Context';
+import { PortfolioContext, IContext } from '../../Context';
 import ufoInSF from '../../Images/ufoInSF.png';
 import cityWeather from '../../Images/cityWeather.png';
 import faceRecognition from '../../Images/faceRecognition.png';
 import ticTacToe from '../../Images/ticTacToe.png';
-
-interface IContext {
-  projects: Array<Projects>;
-}
 
 const Projects: React.FC = () => {
   const { projects } = useContext<IContext>(PortfolioContext);
