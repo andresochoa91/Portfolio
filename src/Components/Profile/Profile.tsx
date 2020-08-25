@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../Images/ufoInSF.png'
-import Education from './Education';
-import Skills from './Skills';
-import Experience from './Experience';
+import Education from './ChildrenComponents/Education';
+import Skills from './ChildrenComponents/Skills';
+import Experience from './ChildrenComponents/Experience';
 import { Switch, Route, NavLink, Redirect, RouteComponentProps } from 'react-router-dom';
-import '../../app.css';
+import '../../app.styles.scss';
 
 const Profile: React.SFC<RouteComponentProps> = ({ match }) => {
   const lStyles: string = "sp br-pill bb link dim dark-gray f6 f5-ns dib hover-bg-light-";

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../Images/htmllogo.png';
-import '../../app.css';
+import '../../app.styles.scss';
 
 /* This displays a header with a navbar that includes link.... */
 const Header: React.FC = () => {
