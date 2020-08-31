@@ -17,8 +17,8 @@ const Header: React.FC = () => {
       <nav className="bt bb tc mw7 center mt4">
         <NavLink activeClassName="act1" className={`${tStyles}green`} to="/about">About Me</NavLink>
         <NavLink activeClassName="act2" className={`${tStyles}yellow`} to="/profile">Profile</NavLink>
-        <NavLink activeClassName="act3" className={`${tStyles}blue`} to="/projects">Projects</NavLink>
-        <NavLink activeClassName="act4" className={`${tStyles}pink`} to="/contact">Contact</NavLink>
+        <NavLink activeClassName="act3" className={`${tStyles}pink`} to="/projects">Projects</NavLink>
+        <NavLink activeClassName="act4" className={`${tStyles}blue`} to="/contact">Contact</NavLink>
       </nav>
     </header>
   );

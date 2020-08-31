@@ -25,5 +25,7 @@ type Projects = {
   name: string,
   description: string;
   id: string;
+  link: string;
+  repo: string;
 }
 

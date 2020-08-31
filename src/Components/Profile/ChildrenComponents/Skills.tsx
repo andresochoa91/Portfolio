@@ -10,7 +10,7 @@ const Skills: React.SFC = () => {
     <div className="tc">
       {
         skills.map((sk: Skills) => (
-          <article key={ sk.id }className="dib w-25 bg-white br3 pa3 pa4-ns mv5 mh3 ba b--black-10">
+          <article key={ sk.id }className="dib w-75 w-40-m w-25-l bg-white br3 pa3 pa4-ns mv5 mh3 ba b--black-10">
             <div className="tc">
               <img 
                 src={sk.name === "Languages" ? language :

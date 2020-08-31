@@ -1,17 +1,30 @@
-.act1 {
-  background-color: #9eebcf !important;
+@import "variables";
+
+%link-italic {
+  font-style: italic;
+  font-size: 1.07rem;
 }
 
-.act2 {
-  background-color: #fbf1a9 !important;
-}
+.act {
+  &1 {
+    @extend %link-italic;
+    background-color: $light-green !important;
+  }
 
-.act3 {
-  background-color: #96ccff !important;
-}
+  &2 {
+    @extend %link-italic;
+    background-color: $light-yellow !important;
+  }
 
-.act4 {
-  background-color: #ffa3d7 !important;
+  &3 {
+    @extend %link-italic;
+    background-color: $light-pink !important;
+  }
+
+  &4 {
+    @extend %link-italic;
+    background-color: $light-blue !important;
+  }
 }
 
 .sp {
