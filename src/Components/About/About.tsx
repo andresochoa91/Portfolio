@@ -23,13 +23,13 @@ const About: React.FC = () => {
           </h2>
         </header>
         <div className="fn w-100 fr-ns w-50-ns">
-          <p className="f5 lh-copy mt0-ns">
-          I was born in Medellin Colombia, the city where I lived until I graduated in Industrial Engineering. While in college I discovered my love for computers through programming classes and being an active member of the research group focused on helping vulnerable groups of people through technology.
+          <p className="tj f5 lh-copy mt0-ns">
+            I was born in Medellin Colombia, the city where I lived until I graduated in Industrial Engineering. While in college I discovered my love for computers through programming classes and being an active member of the research group focused on helping vulnerable groups of people through technology.
           </p>
-          <p className="f5 lh-copy">
+          <p className="tj f5 lh-copy">
             I currently live in the beautiful city of San Francisco. My family is the pillar of my life, and being able to use programming to make a positive impact on society is my passion.
           </p>
-          <p className="f5 lh-copy">
+          <p className="tj f5 lh-copy">
             I love meeting people from different cultures and backgrounds, which is why I have lived in different countries, I have traveled all over the Americas and I also speak different languages (English, Spanish, Portuguese and Italian).
           </p>
         </div>

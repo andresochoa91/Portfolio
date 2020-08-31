@@ -13,7 +13,7 @@ const Profile: React.SFC<RouteComponentProps> = ({ match }) => {
       <nav className="tc w-100 border-box">
         <NavLink to={`${match.url}/languages`} activeClassName="act1" className={`${lStyles}green`}>Coding Skills</NavLink>
         <NavLink to={`${match.url}/education`} activeClassName="act2" className={`${lStyles}yellow`}>Education</NavLink>
-        <NavLink to={`${match.url}/experience`} activeClassName="act3" className={`${lStyles}blue`}>Experience</NavLink>
+        <NavLink to={`${match.url}/experience`} activeClassName="act3" className={`${lStyles}pink`}>Experience</NavLink>
       </nav>
       <Switch>
         <Route exact path={`${match.path}`} render={() => <Redirect to={`${match.path}/languages`} />}/>

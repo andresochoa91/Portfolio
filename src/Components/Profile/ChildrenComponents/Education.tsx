@@ -5,6 +5,8 @@ const Education: React.SFC = () => {
   const { studies } = useContext<IContext>(PortfolioContext);
   return (
     <section className="mw7 mt4 center">
+      {console.log(studies)}
+
       {
         studies.map((st: Studies) => (
           <article key={ st.id } className="pv4 bb b--black-10 ph3 ph0-l">
@@ -14,7 +16,7 @@ const Education: React.SFC = () => {
                 <h3 className="athelas">{st.title}</h3>
                 {
                   JSON.parse(st.description).map((desc: string, i: number) => (
-                    <p key={ `${desc}${i}` } className="f5 f4-l lh-copy athelas">
+                    <p key={ `${desc}${i}` } className="tj f5 f4-l lh-copy athelas">
                       {desc}
                     </p>
                   ))
