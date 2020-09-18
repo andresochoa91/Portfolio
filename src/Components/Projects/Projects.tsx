@@ -4,6 +4,8 @@ import ufoInSF from '../../Images/ufoInSF.png';
 import cityWeather from '../../Images/cityWeather.png';
 import faceRecognition from '../../Images/faceRecognition.png';
 import ticTacToe from '../../Images/ticTacToe.png';
+import favoriteSites from '../../Images/favoriteSites.png';
+import vegeloper from '../../Images/vegeloper.png';
 
 const Projects: React.FC = () => {
   const { projects } = useContext<IContext>(PortfolioContext);
@@ -20,7 +22,9 @@ const Projects: React.FC = () => {
                     name === "Tic Tac Toe" ? ticTacToe : 
                     name === "UFO in San Francisco" ? ufoInSF :
                     name === "City Weather" ? cityWeather : 
-                    name === "Face Recognition" ? faceRecognition : ""
+                    name === "Face Recognition" ? faceRecognition :
+                    name === "Favorite Sites" ? favoriteSites : 
+                    name === "Vegeloper" ? vegeloper : ""
                   } 
                   alt="Frank Ocean Blonde Album Cover" 
                   className="h5 w-100 db outline black-10"/>
