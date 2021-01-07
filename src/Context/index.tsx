@@ -21,28 +21,23 @@ export const Provider = (props: any) => {
   const [ skills, setSkills ] = useState<Array<Skills>>([]);
   const [ projects, setProjects ] = useState<Array<Projects>>([]);
   
-  const apiKey: string = "?api_key=keyBeXZyPUF8I8G0u";
-  const url: string = "https://api.airtable.com/v0/appkh2au2vrFCqrR6/Table%20";
-
-
-  const fetchAirtable = (num: number):void => {
-    fetch(`${url}${num}${apiKey}`)
-    .then(response => response.json())
-    .then(data => {
-      ( num === 1 ? setStudies :
-        num === 2 ? setExperience :
-        num === 3 ? setSkills : setProjects
-      )(data.records.map((d: any) => {
-        return {...d.fields, id: d.id};  
-      }))
-    })
-  }
+  const apiKey = process.env.REACT_APP_API_KEY;
+  const url = process.env.REACT_APP_URL;
 
   useEffect(() => {
     for (let i = 1; i <= 4; i++) {
-      fetchAirtable(i)
+      fetch(`${url}${i}${apiKey}`)
+      .then(response => response.json())
+      .then(data => {
+        ( i === 1 ? setStudies :
+          i === 2 ? setExperience :
+          i === 3 ? setSkills : setProjects
+        )(data.records.map((d: any) => {
+          return {...d.fields, id: d.id};  
+        }))
+      })
     }
-  }, []);
+  }, [apiKey, url]);
 
   return (
     <PortfolioContext.Provider value={{
