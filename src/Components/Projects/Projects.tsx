@@ -7,55 +7,9 @@ import ticTacToe from '../../Images/ticTacToe.png';
 import favoriteSites from '../../Images/favoriteSites.png';
 import vegeloper from '../../Images/vegeloper.png';
 import atucasa from '../../Images/atucasa.png';
+import { projects } from '../../Database';
 
 const Projects: React.FC = () => {
-
-  const projects = [
-    {
-      name: "A Tu Casa",
-      description: "Application that allows small businesses and neighborhood stores to show, sell and deliver their products to customers, receiving all the benefits of the sale. On the Front-End, I used React with Hooks and Context, TypeScript and React-Bootstrap. On the Back-End, I used Ruby on Rails, PostgreSQL, RSpec and Firebase. The Front-End was deployed using Netlify, and the Ruby on Rails Back-End/PostgreSQL Back-End was deployed using Heroku.",
-      link: "https://atucasa.netlify.app",
-      repo: "https://github.com/andresochoa91/atucasa-front-end"
-    },
-    {
-      name: "Vegeloper",
-      description: "Application that allows you to search and save vegetarian recipes from different parts of the world. Created by 8 developers. My role was Project Manager and lead of Front-End team. We implemented Vanilla JavaScript, HTML, CSS, SASS on the Front-End, along with HBS to create partials. We implemented Node.JS and Express.JS in server side with MongoDB in databases. Deployed with Heroku.",
-      link: "https://vegeloper-app.herokuapp.com/",
-      repo: "https://github.com/Code-the-Dream-Students/veggie-recipes"
-    },
-    {
-      name: "Favorite Sites",
-      description: "Application that allows users to save, edit and delete their favorite websites, and also calculate the user's weather forecast based on the Zip Code the user privides. On the Front-End, I implemented React with Hooks and Context, TypeScript and React-Bootstrap. On the Back-End, I used Firebase, with Google Auth for Authentication and Firestore as Data Base. This application was deployed using Netlify.",
-      link: "https://favorite-sites.netlify.app/weather",
-      repo: "https://github.com/andresochoa91/react-final-section-andresochoa91"
-    },
-    {
-      name: "City Weather",
-      description: "Application that makes a full week's weather forecast for any part of the world, made with Vanilla JavaScript, Bootstrap, using Leaflet API to locate any place in the world on the map, OpenWeather API to forecast weather, and deployed with Netlify.",
-      link: "https://getcityweather.netlify.app/",
-      repo: "https://github.com/andresochoa91/weather-app"
-    },
-    {
-      name: "UFO in San Francisco",
-      description: "Video game that consists of catching aliens in San Francisco, created using Vanilla JavsScript, ProcessingJS and Canvas. Deployed with github pages.",
-      link: "https://andresochoa91.github.io/ufoinsanfrancisco",
-      repo: "https://github.com/andresochoa91/ufoinsanfrancisco"
-    },
-    {
-      name: "Face Recognition",
-      description: "Application that allows to recognize faces, create users, store amount of facial recognition made, created with ReactJS, NodeJS and ExpressJS on server side, database in PosgreSQL, using Clarify API and deployed with Heroku.",
-      link: "https://face-rec-front-app.herokuapp.com",
-      repo: "https://github.com/andresochoa91/facerecognition"
-    },
-    {
-      name: "Tic Tac Toe",
-      description: "Classic Tic Tac Toe game, made from scratch using ReactJS, React Context, React Hooks, Styled components, and deployed with Netlify.",
-      link: "https://tictactoereact1.netlify.app/",
-      repo: "https://github.com/andresochoa91/react-section-1-andresochoa91-1"
-    },
-  ];
-
-  // const { projects } = useContext<IContext>(PortfolioContext);
   return (
     <div className="mw8 center w-100 dt-ns dt--fixed-ns bb b--black-10">
       {

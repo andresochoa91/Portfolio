@@ -1,19 +1,19 @@
-import React, { useContext } from 'react';
-import { PortfolioContext, IContext } from '../../../Context';
+import React, { FC } from 'react';
+import { experience } from '../../../Database';
 
-const Experience: React.SFC = () => {
-  const { experience } = useContext<IContext>(PortfolioContext);
+const Experience: FC = () => {
+  
   return (
     <section className="mw7 mt4 center" >
       {
-        experience.map((exp: Experience) => (
-          <article key={ exp.id } className="pv4 bb b--black-10 ph3 ph0-l">
+        experience.map((exp) => (
+          <article key={ exp.company } className="pv4 bb b--black-10 ph3 ph0-l">
             <div className="flex flex-column flex-row-ns">
               <div className="w-100 pr3-ns order-2 order-1-ns">
                 <h1 className="f3 athelas mt0 lh-title">{exp.title}</h1>
                 <h3 className="athelas">{exp.company}</h3>
                 {
-                  JSON.parse(exp.description).map((desc: string, i: number) => (
+                  exp.description.map((desc: string, i: number) => (
                     <p key={ `${desc}${i}` } className="tj f5 f4-l lh-copy athelas">
                       {desc}
                     </p>
