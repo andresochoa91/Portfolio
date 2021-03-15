@@ -70,7 +70,7 @@ export const experience = [
       "-Planned and organized events for the community.",
       "-Organized and helped execute church expansion in a disadvantaged area of Palmira, Colombia."
     ],
-    status: "October 2016 - February 2019"
+    status: "October 2017 - February 2019"
   },
   {
     title: "Workforce Management Analyst",
